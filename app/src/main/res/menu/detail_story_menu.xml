@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/nav_edit"
+        android:icon="@drawable/ic_edit_secondary"
+        android:title="Edit Story"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/nav_delete"
+        android:icon="@drawable/ic_delete"
+        android:title="Delete Story"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/nav_unfavorite"
+        android:icon="@drawable/ic_unfavorite"
+        android:title="Remove Favorite"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/nav_favorite"
+        android:icon="@drawable/ic_favorited"
+        android:title="Add to favorite"
+        android:visible="false"
+        app:showAsAction="ifRoom" />
+
+</menu>

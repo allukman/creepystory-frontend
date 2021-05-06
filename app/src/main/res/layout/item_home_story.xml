@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp"
+            android:layout_margin="4dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/primary">
+
+                <ImageView
+                    android:id="@+id/iv_image"
+                    android:layout_width="100dp"
+                    android:layout_height="110dp"
+                    android:layout_marginVertical="16dp"
+                    android:layout_marginHorizontal="8dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/book"
+                    app:layout_constraintTop_toBottomOf="@id/tv_category"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="8dp"
+                    android:layout_marginHorizontal="8dp"
+                    android:text="Judul Cerita ini "
+                    android:maxLength="30"
+                    android:fontFamily="@font/gothic"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@id/tv_name"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tv_content"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:maxLines="3"
+                    android:textSize="16sp"
+                    android:layout_marginHorizontal="16dp"
+                    android:text="@string/lorem_ipsum"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/ptserif"
+                    app:layout_constraintTop_toTopOf="@id/iv_image"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/iv_image"/>
+
+
+                <TextView
+                    android:id="@+id/tv_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:textSize="18sp"
+                    android:text="(Real Experience)"
+                    app:layout_constraintLeft_toLeftOf="@id/tv_title"
+                    app:layout_constraintTop_toBottomOf="@id/tv_title"/>
+
+                <ImageView
+                    android:id="@+id/iv_created"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_time"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintLeft_toLeftOf="@id/tv_content"
+                    app:layout_constraintTop_toBottomOf="@id/tv_content"/>
+
+                <TextView
+                    android:id="@+id/tv_created"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:textSize="16sp"
+                    android:text="2020-10-10"
+                    android:layout_marginLeft="8dp"
+                    app:layout_constraintTop_toTopOf="@id/iv_created"
+                    app:layout_constraintLeft_toRightOf="@id/iv_created"/>
+
+                <TextView
+                    android:id="@+id/tv_favorited"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="10"
+                    android:textSize="16sp"
+                    app:layout_constraintRight_toRightOf="@id/tv_content"
+                    app:layout_constraintTop_toTopOf="@id/iv_created"/>
+
+                <ImageView
+                    android:id="@+id/iv_favorite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_favorited"
+                    android:layout_marginRight="4dp"
+                    app:layout_constraintRight_toLeftOf="@id/tv_favorited"
+                    app:layout_constraintTop_toTopOf="@id/tv_favorited"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_favorited"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_photo"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/profile"
+                    android:layout_marginVertical="8dp"
+                    app:layout_constraintLeft_toLeftOf="@id/iv_image"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:text="Al Lukman"
+                    android:textColor="@color/white"
+                    android:fontFamily="sans-serif-medium"
+                    android:layout_marginLeft="8dp"
+                    app:layout_constraintLeft_toRightOf="@id/profile_photo"
+                    app:layout_constraintTop_toTopOf="@id/profile_photo"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</layout>
